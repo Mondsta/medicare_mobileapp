@@ -15,7 +15,7 @@ class _ChatState extends State<Chat> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Chat ',
+          'Chat Dokter',
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Colors.red,
