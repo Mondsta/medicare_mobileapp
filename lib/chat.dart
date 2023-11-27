@@ -70,9 +70,11 @@ class _ChatState extends State<Chat> {
                     ),
                   ),
                   IconButton(
-                    icon: Icon(
-                      Icons.send,
-                      color: Colors.red,
+                    icon: Image.asset(
+                      'assets/send.png',
+                      width: 24.0,
+                      height: 24.0,
+                      color: Colors.red, // Warna ikon
                     ),
                     onPressed: () {
                       _sendMessage();
