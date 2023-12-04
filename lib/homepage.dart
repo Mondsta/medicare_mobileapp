@@ -1,51 +1,111 @@
 import 'package:flutter/material.dart';
+import 'login.dart';
+import 'konsultasi.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home'),
+        backgroundColor: Color.fromRGBO(244, 67, 54, 1),
+        title: const Text('Medicare'),
+        actions: [
+        ],
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            // Home page UI elements here
-
-            const Text(
-              'Welcome to Medicare!',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 30), // Add some space between welcome text and buttons
-            ElevatedButton(
-              onPressed: () {
-                // Add logic for "Konsultasi" button
-              },
-              child: Container(
-                padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
-                child: const Text(
-                  'Konsultasi',
-                  style: TextStyle(fontSize: 18),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                OutlinedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Konsultasi()),
+                    );
+                  },
+                  style: OutlinedButton.styleFrom(
+                    side: BorderSide(color: Colors.black),
+                    backgroundColor: Colors.transparent,
+                  ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Image.asset(
+                        'assets/Medicare.png',
+                        width: 100, // adjust the width as needed
+                        height: 100, // adjust the height as needed
+                      ),
+                      const SizedBox(height: 10),
+                      const Text(
+                        'Konsultasi',
+                        style: TextStyle(color: Color.fromRGBO(244, 67, 54, 1), fontSize: 18),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
+              ],
             ),
-            const SizedBox(height: 20), // Add some space between buttons
-            ElevatedButton(
-              onPressed: () {
-                // Add logic for "Obat" button
-              },
-              child: Container(
-                padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
-                child: const Text(
-                  'Obat',
-                  style: TextStyle(fontSize: 18),
+            const SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                OutlinedButton(
+                  onPressed: () {
+                    // Add logic for "Obat" button
+                  },
+                  style: OutlinedButton.styleFrom(
+                    side: BorderSide(color: Colors.black),
+                    backgroundColor: Colors.transparent,
+                  ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Image.asset(
+                        'assets/Medicare.png',
+                        width: 100, // adjust the width as needed
+                        height: 100, // adjust the height as needed
+                      ),
+                      const SizedBox(height: 8),
+                      const Text(
+                        'Obat',
+                        style: TextStyle(color: Color.fromRGBO(244, 67, 54, 1), fontSize: 18),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
+              ],
             ),
           ],
         ),
       ),
+      floatingActionButton: Container(
+        alignment: Alignment.bottomRight,
+        padding: const EdgeInsets.all(16.0),
+        child: ElevatedButton(
+          onPressed: () {
+            // Add logic for "Log Out" button
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => LoginScreen()),
+            );
+          },
+          style: ElevatedButton.styleFrom(
+            primary: Color.fromRGBO(244, 67, 54, 1),
+          ),
+          child: const Text('Log Out'),
+        ),
+      ),
     );
   }
+}
+
+void main() {
+  runApp(
+    MaterialApp(
+      home: HomePage(),
+    ),
+  );
 }

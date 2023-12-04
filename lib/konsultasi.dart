@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'chat.dart';
+import 'package:medicare_application/dokteranak_chat.dart';
+import 'package:medicare_application/dokterumum_chat.dart';
 
 class Konsultasi extends StatelessWidget {
   @override
@@ -8,7 +8,7 @@ class Konsultasi extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Konsultasi'),
-        backgroundColor: Colors.red, // Warna latar belakang appbar
+        backgroundColor: Color.fromRGBO(244, 67, 54, 1), // Warna latar belakang appbar
       ),
       body: Container(
         padding: EdgeInsets.all(16.0),
@@ -21,7 +21,7 @@ class Konsultasi extends StatelessWidget {
               style: TextStyle(
                 fontSize: 24.0,
                 fontWeight: FontWeight.bold,
-                color: Colors.red, // Warna teks
+                color: Color.fromRGBO(244, 67, 54, 1), // Warna teks
               ),
             ),
             SizedBox(height: 16.0),
@@ -37,12 +37,12 @@ class Konsultasi extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Chat()),
+                  MaterialPageRoute(builder: (context) => DokterUmumChat()),
                 );
                 // Aksi ketika tombol ditekan
               },
               style: ElevatedButton.styleFrom(
-                primary: Colors.red, // Warna latar belakang tombol
+                primary: Color.fromRGBO(244, 67, 54, 1), // Warna latar belakang tombol
               ),
               child: Text(
                 'Dokter Umum',
@@ -56,7 +56,7 @@ class Konsultasi extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Chat()),
+                  MaterialPageRoute(builder: (context) => DokterAnakChat()),
                 );
                 // Aksi ketika tombol ditekan
               },

@@ -106,7 +106,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                   child: const Text(
                     'Register',
-                    style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+                    style: TextStyle(color: Color.fromRGBO(244, 67, 54, 1), fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
