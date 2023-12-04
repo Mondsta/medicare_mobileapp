@@ -47,7 +47,7 @@ class _UserChatPageState extends State<UserChatPage> {
           padding: EdgeInsets.all(8.0),
           margin: EdgeInsets.symmetric(vertical: 4.0, horizontal: 8.0),
           decoration: BoxDecoration(
-            color: Color.fromARGB(255, 57, 57, 57),
+            color: Color.fromRGBO(244, 67, 54, 1),
             borderRadius: BorderRadius.circular(8.0),
           ),
           child: Text(
@@ -63,7 +63,7 @@ class _UserChatPageState extends State<UserChatPage> {
           padding: EdgeInsets.all(8.0),
           margin: EdgeInsets.symmetric(vertical: 4.0, horizontal: 8.0),
           decoration: BoxDecoration(
-            color: Color.fromARGB(255, 57, 57, 57),
+            color: Color.fromRGBO(244, 67, 54, 1),
             borderRadius: BorderRadius.circular(8.0),
           ),
           child: Image.file(
@@ -81,7 +81,7 @@ class _UserChatPageState extends State<UserChatPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 34, 40, 49),
+        backgroundColor: Color.fromRGBO(244, 67, 54, 1),
         title: Text(widget.username),
       ),
       body: Column(

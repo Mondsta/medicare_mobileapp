@@ -9,77 +9,80 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(244, 67, 54, 1),
         title: const Text('Medicare'),
-        actions: [
-        ],
+        actions: [],
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                OutlinedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Konsultasi()),
-                    );
-                  },
-                  style: OutlinedButton.styleFrom(
-                    side: BorderSide(color: Colors.black),
-                    backgroundColor: Colors.transparent,
-                  ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Image.asset(
-                        'assets/Medicare.png',
-                        width: 100, // adjust the width as needed
-                        height: 100, // adjust the height as needed
-                      ),
-                      const SizedBox(height: 10),
-                      const Text(
-                        'Konsultasi',
-                        style: TextStyle(color: Color.fromRGBO(244, 67, 54, 1), fontSize: 18),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Container(
+            alignment: Alignment.center,
+            child: const Text(
+              'Nama : Raymond',
+              style: TextStyle(
+                color: Color.fromRGBO(244, 67, 54, 1),
+                fontSize: 18,
+              ),
             ),
-            const SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                OutlinedButton(
-                  onPressed: () {
-                    // Add logic for "Obat" button
-                  },
-                  style: OutlinedButton.styleFrom(
-                    side: BorderSide(color: Colors.black),
-                    backgroundColor: Colors.transparent,
-                  ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Image.asset(
-                        'assets/Medicare.png',
-                        width: 100, // adjust the width as needed
-                        height: 100, // adjust the height as needed
-                      ),
-                      const SizedBox(height: 8),
-                      const Text(
-                        'Obat',
-                        style: TextStyle(color: Color.fromRGBO(244, 67, 54, 1), fontSize: 18),
-                      ),
-                    ],
-                  ),
+          ),
+          SizedBox(height: 20),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              OutlinedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Konsultasi()),
+                  );
+                },
+                style: OutlinedButton.styleFrom(
+                  side: BorderSide(color: Colors.black),
+                  backgroundColor: Colors.transparent,
                 ),
-              ],
-            ),
-          ],
-        ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Image.asset(
+                      'assets/Medicare.png',
+                      width: 100, // adjust the width as needed
+                      height: 100, // adjust the height as needed
+                    ),
+                    const SizedBox(height: 10),
+                    const Text(
+                      'Konsultasi',
+                      style: TextStyle(color: Color.fromRGBO(244, 67, 54, 1), fontSize: 18),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(width: 20), // Adjust the spacing between buttons
+              OutlinedButton(
+                onPressed: () {
+                  // Add logic for "Obat" button
+                },
+                style: OutlinedButton.styleFrom(
+                  side: BorderSide(color: Colors.black),
+                  backgroundColor: Colors.transparent,
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Image.asset(
+                      'assets/Medicare.png',
+                      width: 100, // adjust the width as needed
+                      height: 100, // adjust the height as needed
+                    ),
+                    const SizedBox(height: 8),
+                    const Text(
+                      'Obat',
+                      style: TextStyle(color: Color.fromRGBO(244, 67, 54, 1), fontSize: 18),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
       floatingActionButton: Container(
         alignment: Alignment.bottomRight,

@@ -45,6 +45,24 @@ class _RegisterScreenState extends State<RegisterScreen> {
               const SizedBox(height: 10),
               Container(
                 width: 300,
+                child: const TextField(
+                  decoration: InputDecoration(
+                    hintText: 'Name', // Added field for Name
+                    filled: true,
+                    fillColor: Colors.white,
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black),
+                    ),
+                    labelStyle: TextStyle(color: Colors.grey),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 10),
+              Container(
+                width: 300,
                 child: TextField(
                   obscureText: !_isPasswordVisible,
                   decoration: InputDecoration(
@@ -74,6 +92,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                 ),
               ),
+              const SizedBox(height: 10),
               Container(
                 width: 300,
                 child: TextField(
@@ -105,7 +124,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
               ElevatedButton(
                 onPressed: () {
                   // Add registration logic here
