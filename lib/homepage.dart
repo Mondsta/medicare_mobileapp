@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medicare_application/obat.dart';
 import 'login.dart';
 import 'konsultasi.dart';
 
@@ -43,7 +44,7 @@ class HomePage extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Image.asset(
-                      'assets/Medicare.png',
+                      'assets/konsultasi.png',
                       width: 100, // adjust the width as needed
                       height: 100, // adjust the height as needed
                     ),
@@ -58,7 +59,10 @@ class HomePage extends StatelessWidget {
               const SizedBox(width: 20), // Adjust the spacing between buttons
               OutlinedButton(
                 onPressed: () {
-                  // Add logic for "Obat" button
+                 Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ObatPage()),
+                  );
                 },
                 style: OutlinedButton.styleFrom(
                   side: BorderSide(color: Colors.black),
@@ -68,7 +72,7 @@ class HomePage extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Image.asset(
-                      'assets/Medicare.png',
+                      'assets/obat.png',
                       width: 100, // adjust the width as needed
                       height: 100, // adjust the height as needed
                     ),

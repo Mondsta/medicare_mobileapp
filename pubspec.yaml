@@ -24,9 +24,16 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+
   cupertino_icons: ^1.0.2
   intl: ^0.18.1
   image_picker: ^1.0.0
+  font_awesome_flutter: ^9.2.0
+  custom_navigation_bar: ^0.8.2
+  simple_animations: ^4.0.1
+  supercharged: ^2.1.1
+
 
 dev_dependencies:
   flutter_test:
@@ -34,6 +41,9 @@ dev_dependencies:
   flutter_lints: ^2.0.0
 
 flutter:
+
+  uses-material-design: true
   assets:
     - assets/Medicare.png
-    - assets/send.png
+    - assets/konsultasi.png
+    - assets/obat.png
