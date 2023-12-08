@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medicare_application/view/navigator.dart';
 import 'register.dart';
 import 'homepage.dart';
 

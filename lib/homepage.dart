@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medicare_application/obat.dart';
+import 'package:medicare_application/view/navigator.dart';
 import 'login.dart';
 import 'konsultasi.dart';
 
@@ -61,7 +61,7 @@ class HomePage extends StatelessWidget {
                 onPressed: () {
                  Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => ObatPage()),
+                    MaterialPageRoute(builder: (context) => MainNavigator()),
                   );
                 },
                 style: OutlinedButton.styleFrom(
